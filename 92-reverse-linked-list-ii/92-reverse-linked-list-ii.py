@@ -20,3 +20,5 @@ class Solution:
             prev.next = temp
         
         return dummy.next
+    
+    # discussion 1st comment https://leetcode.com/problems/reverse-linked-list-ii/discuss/30672/Python-one-pass-iterative-solution

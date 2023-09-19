@@ -15,10 +15,12 @@ class Solution:
                     for r, c in (i, j), (i, j + 1), (i, j - 1), (i + 1, j), (i - 1, j):
                         if m > r >= 0 <= c < n:
                             #print("{0:b}".format(1^(1 << (r * n + c))),r,c)
-                            next ^= 1 << (r * n + c) # exclusive or,  If the bits are the same, the result is 0. If the bits are different, the result is 1.
+                            next ^= 1 << (r * n + c)
                             #print("{0:b}".format(next), r, c)
                     if next not in seen:
                         seen.add(next)
                         dq.append((next, step + 1))
         return -1
-    # https://leetcode.com/problems/minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix/discuss/446342/JavaPython-3-Convert-matrix-to-int%3A-BFS-and-DFS-codes-w-explanation-comments-and-analysis.
+
+# Time: O(m * n * 2 ^ (m * n)), Space: O(2 ^ (m * n)).
+# https://leetcode.com/problems/minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix/discuss/446342/JavaPython-3-Convert-matrix-to-int%3A-BFS-and-DFS-codes-w-explanation-comments-and-analysis.

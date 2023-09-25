@@ -20,3 +20,5 @@ class Solution:
             return ans
 
         return prefixIsValid(n - 1)
+    
+# time and space complexity are both n

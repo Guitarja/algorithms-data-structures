@@ -13,7 +13,7 @@ class Solution:
         while lo <= hi:
             mid = (lo + hi) //2
             # print(mid)
-            # will eventually find the least number euqals to a summation
+            # will eventually find the least number euqals to a summation, cause lo and hi will be the same number
             if valid(nums,m,mid):
                 ans = mid
                 hi = mid - 1

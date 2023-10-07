@@ -6,9 +6,6 @@ class Solution:
             capacity -= passenger
             if capacity < 0:
                 return False
-        print(sorted([item for numPassengersi, fromi, toi in trips
-                                      for item in [[fromi, numPassengersi], [toi, -numPassengersi]]]
-                                      ,key =lambda x: (x[0],x[1])))
         return True
     
     '''Explanation

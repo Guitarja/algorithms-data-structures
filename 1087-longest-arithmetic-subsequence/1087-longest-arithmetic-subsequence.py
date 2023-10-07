@@ -7,3 +7,5 @@ class Solution:
                 cumu[j, A[j] - A[i]] = cumu.get((i, A[j] - A[i]), 1) + 1
         #print(cumu.items())
         return max(cumu.values())
+    # Time complexity n^2
+    # Space complexity n^2

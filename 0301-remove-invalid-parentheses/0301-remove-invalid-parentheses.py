@@ -16,6 +16,8 @@ class Solution:
             # BFS
             for elem in level:
                 for i in range(len(elem)):
+                    if elem[i].isalpha():
+                        continue
                     new_level.add(elem[:i] + elem[i + 1:])
             level = new_level
     

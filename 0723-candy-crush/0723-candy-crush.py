@@ -21,11 +21,9 @@ class Solution(object):
                 if board[r][c] > 0:
                     
                     board[wr][c] = board[r][c]
-                    #print(board, r, c, wr,'first')
                     wr -= 1
                     
             for wr in range(wr, -1, -1):
-                #print(board, r, c, wr,'second')
                 board[wr][c] = 0
 
         return self.candyCrush(board) if todo else board

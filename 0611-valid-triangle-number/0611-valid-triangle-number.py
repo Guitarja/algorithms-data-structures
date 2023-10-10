@@ -13,3 +13,5 @@ class Solution:
 
         return count
 
+# Time complexity N^2
+# Space complexity logN, sorting takes logN

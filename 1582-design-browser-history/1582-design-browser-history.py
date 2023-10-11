@@ -1,7 +1,7 @@
 class BrowserHistory:
 
     def __init__(self, homepage: str):
-        self.queue = collections.deque()
+        self.queue = []
         self.pos = 0
         self.forwad = 0
         self.queue.append(homepage)

@@ -25,4 +25,5 @@ class Solution:
                     unique_islands.add(tuple(path_signature))
         
         return len(unique_islands)
-        
+# time M * N
+# space M * N

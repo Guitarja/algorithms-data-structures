@@ -6,3 +6,5 @@ class Solution:
                 return sr[:i] + s
         
         return 0
+# time I think is less than n^2
+# space n

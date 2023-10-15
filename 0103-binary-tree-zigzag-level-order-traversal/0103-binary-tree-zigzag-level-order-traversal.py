@@ -51,3 +51,4 @@ class Solution:
                 is_order_left = not is_order_left
 
         return ret
+# time, space n

@@ -32,3 +32,5 @@ class Solution:
                 max_freq_sums.append(sum)
         
         return max_freq_sums
+# time n (2n)
+# space n (2n)

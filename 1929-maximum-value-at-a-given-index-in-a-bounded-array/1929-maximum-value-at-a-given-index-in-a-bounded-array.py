@@ -26,14 +26,14 @@ class Solution:
     
     def maxValue(self, n: int, index: int, maxSum: int) -> int:
         left, right = 1, maxSum
-        while left < right:
+        while left <= right:
             mid = (left + right + 1) // 2
             if self.getSum(index, mid, n) <= maxSum:
-                left = mid
+                left = mid + 1
             else:
                 right = mid - 1
         
-        return left
+        return left - 1
 
 # Time complexity: O(log⁡(maxSum))
 

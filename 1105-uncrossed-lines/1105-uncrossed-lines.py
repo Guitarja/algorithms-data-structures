@@ -19,3 +19,9 @@ class Solution:
             return memo[(i, j)]
 
         return solve(0, 0)
+
+# Time complexity: O(n1⋅n2)
+# Initializing the memo array takes O(n1⋅n2)time.
+# It will take O(n1⋅n2) because there are O(n1⋅n2)states to iterate over. The recursive function may be called multiple times for a given state, but due to memoization, each state is only computed once.
+
+# Space complexity: O(n1⋅n2)

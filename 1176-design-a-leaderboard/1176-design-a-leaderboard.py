@@ -31,8 +31,8 @@ class Leaderboard:
         count, total = 0, 0
 
         for key, value in self.sortedScores.items():
-            times = self.sortedScores.get(key)
-            for _ in range(times): 
+            # times = self.sortedScores.get(key)
+            for _ in range(value): 
                 total += -key
                 count += 1
                 

@@ -36,3 +36,8 @@ class Solution:
                     return False
                 dsu.union(adj[node][0], nei)
         return True
+
+# Let E be the size of dislikes and N be the number of people.
+
+# Time complexity: O(N+E) because of path comnpression
+# Space O(N+E), parent and rank each for N and E space for graph

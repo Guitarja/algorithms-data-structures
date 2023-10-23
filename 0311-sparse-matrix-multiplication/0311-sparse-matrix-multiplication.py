@@ -15,11 +15,11 @@ class Solution:
 
 # Let m and k represent the number of rows and columns in mat1, respectively. Likewise, let k and n represent the number of rows and columns in mat2, respectively.
 
-# Time complexity: O(m⋅k⋅n)O(m \cdot k \cdot n)O(m⋅k⋅n).
+# Time complexity: O(m⋅k⋅n)
 
-# We iterate over all m⋅km \cdot km⋅k elements of the matrix mat1mat1mat1.
-# For each element of matrix mat1mat1mat1, we iterate over all nnn columns of the matrix mat2mat2mat2.
-# Thus, it leads to a time complexity of m⋅k⋅nm \cdot k \cdot nm⋅k⋅n.
-# Space complexity: O(1)O(1)O(1).
+# We iterate over all m⋅k elements of the matrix mat1mat1mat1.
+# For each element of matrix mat1mat1mat1, we iterate over all n columns of the matrix mat2mat2mat2.
+# Thus, it leads to a time complexity of m⋅k⋅n
+# Space complexity: O(1)
 
-# We use a matrix ansansans of size m×nm \times nm×n to output the multiplication result which is not included in auxiliary space.
+# We use a matrix ansansans of size m×n to output the multiplication result which is not included in auxiliary space.

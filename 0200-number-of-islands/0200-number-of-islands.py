@@ -58,7 +58,7 @@ class Solution(object):
 
 # Complexity Analysis
 
-# Time complexity : O(M×N) whereMM is the number of rows and
+# Time complexity : O(M×N) where M is the number of rows and
 # N is the number of columns. Note that Union operation takes essentially constant
 # time when UnionFind is implemented with both path compression and union by rank.
 

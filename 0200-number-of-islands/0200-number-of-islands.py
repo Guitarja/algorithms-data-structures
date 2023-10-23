@@ -55,3 +55,11 @@ class Solution(object):
                         if self.is_valid(grid, nr, nc) and grid[nr][nc] == '1':
                             uf.union(i*n+j, nr*n+nc)
         return uf.count
+
+# Complexity Analysis
+
+# Time complexity : O(M×N) whereMM is the number of rows and
+# N is the number of columns. Note that Union operation takes essentially constant
+# time when UnionFind is implemented with both path compression and union by rank.
+
+# Space complexity : O(M×N) as required by UnionFind data structure.

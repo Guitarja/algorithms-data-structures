@@ -1,25 +1,26 @@
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> List[str]:
-        return self.helper(s, wordDict, {})
-    
-    def helper(self, s, wordDict, memo):
-        if s in memo:
-            return memo[s]
-        if not s:
-            return []
-        
-        res = []
-        
-        for word in wordDict:
-            if not s.startswith(word):
-                continue
-            if len(word) == len(s):
-                res.append(word)
-            else:
-                rest = self.helper(s[len(word):], wordDict, memo)
-                for item in rest:
-                    res.append(word + ' ' + item)
-        memo[s] = res
-        return memo[s]
-# Time complexity: O(n^3). Size of recursion tree can go up to n^2. The creation of the 'res' List takes n time.
+        word_set = set(wordDict)
+        memo = collections.defaultdict(list)
 
+        def _word_break(s):
+            if not s:
+                return [[]]
+            if s in memo:
+                return memo[s]
+            
+            for end_index in range(1, len(s) + 1):
+                word = s[:end_index]
+                if word in word_set:
+                    for subsentence in _word_break(s[end_index:]):
+                        memo[s].append([word]+subsentence)
+            return memo[s]
+        
+        _word_break(s) 
+
+        return [" ".join(words) for words in memo[s]]
+
+# Let N be the length of the input string and W be the number of words in the dictionary.
+
+# Time Complexity: O(N^2+2N+W)
+# Space Complexity: O(2^N⋅N+W)

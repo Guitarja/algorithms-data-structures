@@ -23,7 +23,8 @@ class Solution(object):
 
             prev.next = curr
             curr.prev = prev
-
+            prev = curr
+            
             if curr.next:
                 stack.append(curr.next)
  
@@ -32,7 +33,7 @@ class Solution(object):
                 # don't forget to remove all child pointers.
                 curr.child = None
 
-            prev = curr
+            
         # detach the pseudo head node from the result.
         pseudoHead.next.prev = None
         return pseudoHead.next

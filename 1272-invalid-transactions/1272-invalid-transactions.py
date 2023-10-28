@@ -43,7 +43,7 @@ class Solution(object):
                     continue
                 if name not in r[j]:
                     continue
-                if len(r[j][name]) > 1 or (next(iter(r[j][name])) != city): # get an element from set
+                if len(r[j][name]) > 1 or (next(iter(r[j][name])) != city): # check if larger than 2 or the only one is differ
                     inv.append(i)
                     break
                                         

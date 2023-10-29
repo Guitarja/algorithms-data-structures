@@ -8,3 +8,14 @@ class Solution:
             # p is f(i+1, 'cac')
         return p
 # https://leetcode.com/problems/find-the-winner-of-the-circular-game/solutions/1152585/o-n-o-klg-n-with-table-explanation/
+
+'''
+simulation:
+    def findTheWinner(self, n: int, k: int) -> int:
+        nums = list(range(n))
+        i = 0 
+        while len(nums) > 1: 
+            i = (i + k-1) % len(nums)
+            nums.pop(i)
+        return nums[0] + 1
+'''

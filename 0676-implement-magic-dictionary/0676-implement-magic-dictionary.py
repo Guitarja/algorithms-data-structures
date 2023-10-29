@@ -1,6 +1,6 @@
 class TreeNode:
     def __init__(self) -> None:
-        self.children = collections.defaultdict(TreeNode)
+        self.children = {}
         self.is_word = False
 
 class Trie:
@@ -10,6 +10,8 @@ class Trie:
     def insert(self, word):
         node = self.root
         for c in word:
+            if c not in node.children:
+                node.children[c] = TreeNode()
             node = node.children[c]
         node.is_word = True
 
@@ -18,17 +20,16 @@ class Trie:
         return self.dfs(node, word, 0, 0)
 
     def dfs(self, node, word, index, count):
-        ret = False
-        if count > 1:
-            return False
         if index == len(word):
-            return count == 1 and node.is_word
+            return True if count == 1 and node.is_word else False
         for c in node.children:
-            if c != word[index]:
-                ret |= self.dfs(node.children.get(c), word, index+1, count+1)
-            else:
-                ret |= self.dfs(node.children.get(c), word, index+1, count)             
-        return ret
+            if c == word[index]:
+                if self.dfs(node.children.get(c), word, index+1, count):
+                    return True
+            elif c != word[index] and count == 0:
+                if self.dfs(node.children.get(c), word, index+1, count+1):
+                    return True           
+        return False
 
 class MagicDictionary:
     def __init__(self):

@@ -6,6 +6,7 @@ class Solution:
             for j in range(i):
                 if s[j : i] in wordDict and dp[j] == 1:
                     dp[i] = 1
+                    break
         print(dp)            
         return dp[-1]
 

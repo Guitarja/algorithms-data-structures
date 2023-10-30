@@ -13,11 +13,11 @@ class Solution:
 '''
 Complexity Analysis
 
-Given nnn as the length of s, m as the length of wordDict, and k as the average length of the words in wordDict,
+Given n as the length of s, m as the length of wordDict, and k as the average length of the words in wordDict,
 
 Time complexity: O(n⋅m⋅k)
 
-There are nnn states of dp(i). Because of memoization, we only calculate each state once. To calculate a state, we iterate over mmm words, and for each word perform some substring operations which costs O(k). Therefore, calculating a state costs O(m⋅k), and we need to calculate O(n) states.
+There are n states of dp(i). Because of memoization, we only calculate each state once. To calculate a state, we iterate over mmm words, and for each word perform some substring operations which costs O(k). Therefore, calculating a state costs O(m⋅k), and we need to calculate O(n) states.
 
 Space complexity: O(n)
 

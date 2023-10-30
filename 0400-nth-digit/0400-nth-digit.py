@@ -16,3 +16,5 @@ class Solution:
             base *= 10 
         q, r = divmod(n-1, digit)
         return int(str(base + q)[r])
+
+# time and space logN

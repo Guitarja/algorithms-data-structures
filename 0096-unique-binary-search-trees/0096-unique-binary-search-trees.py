@@ -5,7 +5,9 @@ class Solution:
         dp[1] = 1 #if only one node
         
         for i in range(2, n + 1):
+            # number of nodes from 2 to n
             for j in range(1, i + 1):
+                # root picked from 0 to i
                 dp[i] += dp[j-1] * dp[i-j]
         
         return dp[-1]

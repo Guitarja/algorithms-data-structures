@@ -27,7 +27,7 @@ class Solution:
     def maxValue(self, n: int, index: int, maxSum: int) -> int:
         left, right = 1, maxSum
         while left <= right:
-            mid = (left + right + 1) // 2
+            mid = left + (right - left) // 2
             if self.getSum(index, mid, n) <= maxSum:
                 left = mid + 1
             else:
